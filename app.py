@@ -21,7 +21,7 @@ def index():
 @app.route('/admin', methods=['GET', 'POST'])
 def admin():
     if request.method == 'POST':
-        try:
+        try: #handle error
             email = request.form['email']
             password = request.form['password']
 
@@ -33,8 +33,8 @@ def admin():
 
             print("check -->",admin_user)  
 
-            # Check if the admin user exists and the password matches
-            if admin_user and admin_user[0] == password:  # Corrected column index
+            # Check admin credi..
+            if admin_user and admin_user[0] == password:  
                 return redirect(url_for('admin_panel'))  # Redirect to admin panel
             else:
                 flash('Invalid email or password.')
@@ -56,7 +56,7 @@ def admin_panel():
 @app.route('/registration', methods=['GET', 'POST'])
 def registration():
     if request.method == 'POST':
-        # Get form data
+        
         name = request.form['name']
         email = request.form['email']
         course = request.form['course']
@@ -81,7 +81,7 @@ def update_student(id):
         telephone = request.form['telephone']
         cur.execute("UPDATE students SET name = %s, email = %s, course = %s, telephone = %s WHERE id = %s", (name, email, course, telephone, id))
         mysql.connection.commit()
-        return redirect(url_for('index'))
+        return redirect(url_for('admin_panel'))
     return render_template('update_student.html', student=student)
     
     
@@ -90,7 +90,7 @@ def delete_student(id):
     cur = mysql.connection.cursor()
     cur.execute("DELETE FROM students WHERE id = %s", (id,))
     mysql.connection.commit()
-    return redirect(url_for('index'))
+    return redirect(url_for('admin_panel'))
 
 
 
