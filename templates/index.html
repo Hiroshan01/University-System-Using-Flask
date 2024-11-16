@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus University</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Add background image */
+        body {
+            background-image: url('https://img.freepik.com/premium-photo/harrisonburg-virginia-usa-james-madison-university_303206-87.jpg?w=996');  /* Replace with your image path */
+            background-size: cover;  /* Ensure the image covers the whole screen */
+            background-position: center;  /* Center the image */
+            background-attachment: fixed;  /* Keep the background fixed when scrolling */
+        }
+    </style>
+
+
+</head>
+<body class="bg-secondary" >
+
+<!-- Navbar  boostrap-->
+<nav class="navbar navbar-expand-lg navbar-light bg-primary px-3">
+    <a class="navbar-brand ms-auto" href="#">Nexus University</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav text-whit ">
+            <li class="nav-item me-3">
+                <a class="nav-link e" href="#home">Home</a>
+            </li>
+            <li class="nav-item me-3">
+                <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item me-3">
+                <a class="nav-link" href="#courses">Courses</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('admin') }}">Login Admin</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('registration') }}">User Registration</a>
+            </li>
+            
+        </ul>
+    </div>
+</nav>
+
+<h2 class="text-center mt-2" style="border: 2px solid #007bff; padding: 5px; border-radius: 10px; background-color: #f8f9fa; box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);">Nexus University</h2>
+
+
+
+<!-- Home  -->
+<section id="home" class="container mt-5 font-weight-bold text-light bg-secondary">
+    <div class="border p-4 rounded shadow-sm">
+        <h2 class="text-center mt-2">Welcome to Nexus University</h2>
+        <p class="text-center mt-2">At Nexus University, we are dedicated to providing high-quality education in the field of Information Technology. Located in the heart of Colombo, we offer a vibrant learning environment that fosters innovation and creativity.</p>
+    </div>
+</section>
+
+<!-- About -->
+<section id="about" class="container mt-5 text-light bg-secondary">
+    <div class="border p-4 rounded shadow-sm">
+        <h2 class="text-center mt-2">Learn More About Us</h2>
+        <p class="text-center mt-2">
+            Nexus University is committed to nurturing the next generation of IT professionals. Our faculty consists of industry 
+            experts who bring real-world experience into the classroom. We aim to equip our students with the skills and knowledge necessary to excel in the ever-evolving tech landscape.
+        </p>
+    </div>
+</section>
+
+<!-- Courses -->
+<section id="courses" class="container mt-5 text-light bg-secondary">
+    <div class="border p-4 rounded shadow-sm">
+        <h2 class="text-center mt-2">Courses</h2>
+        <p>Explore our courses.</p>
+        <p>We offer a range of Bachelor of Science (Hons) courses designed to meet the demands of the IT industry. Our programs include:</p>
+        <ul>
+            <li>
+                <strong>Software Engineering:</strong> Dive deep into software development, design, and testing methodologies. Learn to create robust applications and software solutions.
+            </li>
+            <li>
+                <strong>Cyber Security:</strong> Understand the principles of protecting systems, networks, and data from cyber threats. Gain hands-on experience in security practices and technologies.
+            </li>
+            <li>
+                <strong>Networking:</strong> Explore the fundamentals of networking, including design, implementation, and management of network systems. Develop skills in network security and troubleshooting.
+            </li>
+            <li>
+                <strong>Data Science:</strong> Learn how to analyze and interpret complex data sets. Develop expertise in statistical analysis, machine learning, and data visualization.
+            </li>
+        </ul>
+    </div>
+</section>
+
+
+<footer class="bg-primary text-center text-lg-start mt-5 ">
+    <div class="text-center p-3">
+        © 2024 MyWebsite. All rights reserved.
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
